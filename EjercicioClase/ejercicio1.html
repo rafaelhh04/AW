@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Noticias del día</title>
+<style>
+body {
+    font-family: Arial, Helvetica, sans-seri;
+    margin: 20px;
+    background-color: #ffffff;
+
+}
+
+#principal {
+    text-align: center;
+    color: #000000;
+}
+
+/*  noticias */
+.noticia {
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+/* Noticia destacada */
+.noticia.destacada {
+    background-color: #e3f2fd;
+}
+
+/* Alternar colores de fondo */
+.noticia:nth-child(even) {
+    background-color: #ffffff;
+}
+
+.noticia:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+/* Títulos con iconos */
+.titulo {
+    color: #333;
+    font-size: 20px;
+}
+
+.titulo::before {
+    content: "★";
+    color: gold;
+}
+
+/* Primer párrafo en negrita */
+.noticia p:first-of-type {
+    font-weight: bold;
+}
+
+/* Primera letra más grande */
+.noticia p::first-letter {
+    font-size: 20px;
+    color:crimson;
+    font-weight: bold;
+}
+
+/* Enlaces*/
+.leer-mas {
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 3px;
+}
+
+/* Hover */
+.leer-mas:hover {
+    background-color: #0056b3;
+}
+
+/* focus*/
+.leer-mas:focus {
+outline: 3px solid orange;
+outline-offset: 3px;
+background-color: #0056b3;
+}
+
+
+/* Texto seleccionado */
+::selection {
+    background-color: #447ab8;
+    color: #f5eded;
+}
+</style>
+</head>
+<body>
+<h1 id="principal">Noticias de última hora</h1>
+<div class="noticia destacada">
+<h2 class="titulo">Nueva misión espacial</h2>
+<p>La agencia espacial ha lanzado un nuevo satélite para estudiar el cambio climático.</p>
+<a href="https://example.com/mision" class="leer-mas">Leer más</a>
+</div>
+<div class="noticia">
+<h2 class="titulo">Tecnología y educación</h2>
+<p>Las universidades apuestan por la inteligencia artificial para mejorar la enseñanza.</p>
+<a href="https://example.com/educacion" class="leer-mas">Leer más</a>
+</div>
+<div class="noticia">
+<h2 class="titulo">Deportes: final de liga</h2>
+<p>El equipo local se corona campeón tras una temporada intensa.</p>
+<a href="resumen.php" class="leer-mas">Leer más</a>
+</div>
+</body>
+</html>
+<!--
+Preguntas
+1. ¿Qué sucede si el icono decorativo aporta información importante?
+Los lectores de pantalla no pueden leer Pseudoelementos, lo cual los usuarios con discapacidad visual 
+no podrán acceder a esa información.
+
+2.¿Cómo ayudas a los usuarios que navegan con teclado a saber en qué enlace están?
+Para ayudar a los usuarios que navegan con teclado a saber en qué enlace están usamos:
+:focus para mantener visible el  foco solo cuando se usa teclado con un outline visible(3px), para
+poner areas de iteracción visibles y colores de fondo contrastantes.
+
+3. ¿Qué problema existe si el único criterio para diferenciar noticias o enlaces es el color?
+
+No se debe usar únicamente el color para transmitir información, ya que hay que recordar que las 
+personas con daltonismo pueden tener dificultades para distinguir entre ciertos colores rojo-verde 
+azul-amarillo.Esto puede llevar a que no puedan identificar noticias importantes o enlaces, 
+afectando la accesibilidad.
+
+Por ende hay que verificar contraste con herramientas como WebAIM Contrast Checker etc..,
+Y preferir usar valores relativos en fuentes y colores accesibles
+-->
