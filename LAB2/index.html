@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gestión de Flota de Vehículos Eléctricos</title>
+</head>
+<body>
+
+  <h1>Gestión de Flota de Vehículos Eléctricos</h1>
+  <h2>Plataforma de movilidad sostenible</h2>
+  <p>
+    <strong>Aplicaciones Web</strong> para una <em>gestión eficiente</em> de vehículos eléctricos en el <strong>Grado en Ingeniería del Software</strong> 
+    de la <em>Facultad de Informática</em>.
+  </p>
+
+  <!-- Sección Vehículos -->
+  <section id="vehiculos">
+    <h3>Vehículos disponibles</h3>
+    <table>
+      <caption>Vehículos disponibles</caption>
+      <thead>
+        <tr>
+          <th scope="col">Matrícula</th>
+          <th scope="col">Marca</th>
+          <th scope="col">Autonomía (km)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1234 ABC</td>
+          <td>Tesla Model 3</td>
+          <td>500</td>
+        </tr>
+        <tr>
+          <td>5678 DEF</td>
+          <td>Nissan Leaf</td>
+          <td>300</td>
+        </tr>
+        <tr>
+          <td>9012 GHI</td>
+          <td>Renault ZOE</td>
+          <td>250</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Sección Reservas -->
+  <section id="reservas">
+    <h3>Reservar un vehículo</h3>
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Formulario de reserva</legend>
+
+        <p>
+          <label for="nombre">Nombre completo:</label><br>
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            required
+          >
+        </p>
+
+        <p>
+          <label for="email">Correo electrónico:</label><br>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+          >
+        </p>
+
+        <p>
+          <label for="telefono">Teléfono (opcional):</label><br>
+          <input
+            type="tel"
+            id="telefono"
+            name="telefono"
+            pattern="[0-9]{9}"
+            
+          >
+        </p>
+
+        <p>
+          <label for="vehiculo">Vehículo:</label><br>
+          <select id="vehiculo" name="vehiculo" required>
+            <option value="">-- Selecciona uno --</option>
+            <option value="Tesla">Tesla Model 3</option>
+            <option value="Nissan">Nissan Leaf</option>
+            <option value="Renault">Renault ZOE</option>
+          </select>
+        </p>
+
+        <p>
+          <label for="fecha-inicio">Fecha inicio:</label><br>
+          <input
+            type="date"
+            id="fecha-inicio"
+            name="fecha_inicio"
+            required
+          >
+        </p>
+
+        <p>
+          <label for="hora-inicio">Hora inicio:</label><br>
+          <input
+            type="time"
+            id="hora-inicio"
+            name="hora_inicio"
+            required
+          >
+        </p>
+
+        <p>
+          <label for="fecha-fin">Fecha fin:</label><br>
+          <input
+            type="date"
+            id="fecha-fin"
+            name="fecha_fin"
+            required
+          >
+        </p>
+
+        <p>
+          <label for="hora-fin">Hora fin:</label><br>
+          <input
+            type="time"
+            id="hora-fin"
+            name="hora_fin"
+            required
+          >
+        </p>
+
+        <p>
+          <input
+            type="checkbox"
+            id="acepto"
+            name="acepto"
+            required
+          >
+          <label for="acepto">Acepto los términos y condiciones</label>
+        </p>
+
+        <p>
+          <button type="submit">Enviar reserva</button>
+          <button type="reset">Limpiar formulario</button>
+        </p>
+
+      </fieldset>
+    </form>
+  </section>
+
+  <!-- Enlace a la página de contacto -->
+  <p>
+    <a href="contacto.html">Ir a la página de contacto</a>
+  </p>
+
+</body>
+</html>
