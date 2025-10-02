@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestión de Vehículos Eléctricos</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="high-contrast.css" id="contrast-style" disabled />
+</head>
+
+<body>
+  <header class="header">
+    <img src="images/logo.jpg" alt="Logo de la aplicación" class="header__logo" />
+    
+    <nav class="nav" aria-label="Menú principal">
+      <ul class="nav__list">
+        <li class="nav__item"><a href="#inicio" accesskey="I">Inicio</a></li>
+        <li class="nav__item"><a href="#vehiculos" accesskey="V">Vehículos</a></li>
+        <li class="nav__item"><a href="#reservas" accesskey="R">Reservas</a></li>
+        <li class="nav__item"><a href="#contacto" accesskey="C">Contacto</a></li>
+      </ul>
+      <select class="language-selector" aria-label="Selector de idioma" onchange="cambiarIdioma(this.value)">
+        <option value="es" selected>Español</option>
+        <option value="en">English</option>
+      </select>
+    </nav>
+
+    <button class="contrast-toggle" onclick="toggleContrast()" aria-label="Activar modo alto contraste">
+      Alto contraste
+    </button>
+  </header>
+
+  <main class="main">
+    <section id="inicio" class="section">
+      <h1 class="section__title">Bienvenido a la gestión de vehículos eléctricos</h1>
+      <p class="section__text">Esta aplicación permite reservar y gestionar vehículos eléctricos de forma eficiente.</p>
+    </section>
+
+    <section id="vehiculos" class="section">
+      <h2 class="section__title">Vehículos disponibles</h2>
+      <img src="images/ZOE.jpg" alt="Vehículo eléctrico modelo X" class="image" />
+      <img src="images/HATCHBACK.jpg" alt="Vehículo eléctrico modelo Y" class="image" />
+    </section>
+
+    <section id="reservas" class="section">
+      <h2 class="section__title">Reserva tu vehículo</h2>
+      <form class="form" aria-label="Formulario de reserva">
+        <fieldset class="form__fieldset">
+          <legend>Datos de la reserva</legend>
+
+          <label for="nombre" class="form__label">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" class="form__input" />
+
+          <label for="fecha" class="form__label">Fecha de reserva:</label>
+          <input type="date" id="fecha" name="fecha" class="form__input" />
+
+          <label for="vehiculo" class="form__label">Vehículo:</label>
+          <select id="vehiculo" name="vehiculo" class="form__select">
+            <option value="modeloX">Modelo X</option>
+            <option value="modeloY">Modelo Y</option>
+          </select>
+
+          <button type="submit" class="form__button" aria-label="Enviar reserva">Reservar</button>
+        </fieldset>
+      </form>
+    </section>
+
+    <section id="multimedia" class="section">
+      <h2 class="section__title">Movilidad eléctrica en acción</h2>
+      <video controls class="video">
+        <source src="movilidad.mp4" type="video/mp4" />
+        <track src="subtitulos.vtt" kind="subtitles" srclang="es" label="Español" />
+        Tu navegador no soporta el video.
+      </video>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Gestión de Vehículos Eléctricos</p>
+    <p>Contacto: <a href="mailto:info@vehiculoselectricos.com">info@vehiculoselectricos.com</a></p>
+  </footer>
+
+  <script>
+    function cambiarIdioma(lang) {
+      document.documentElement.lang = lang;
+    }
+
+    function toggleContrast() {
+      const style = document.getElementById('contrast-style');
+      style.disabled = !style.disabled;
+    }
+  </script>
+</body>
+</html>

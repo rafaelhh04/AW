@@ -1,0 +1,159 @@
+/* === Reset básico === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* === Tipografía y colores base === */
+body {
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  background-color: #fefefe;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* === Encabezado === */
+.header {
+  background-color: #004080;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.header__logo {
+  height: 50px;
+}
+
+.nav {
+
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav__item a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav__item a:hover,
+.nav__item a:focus {
+  text-decoration: underline;
+  outline: 2px solid #ffffff;
+}
+
+.language-selector {
+  margin-left: 1rem;
+  padding: 0.3rem;
+}
+
+/* === Botón contraste === */
+.contrast-toggle {
+  background-color: #ffcc00;
+  color: #000;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.contrast-toggle:hover {
+  background-color: #e6b800;
+}
+
+/* === Contenido principal === */
+.main {
+  padding: 2rem;
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.section__title {
+  color: #004080;
+  margin-bottom: 1rem;
+}
+
+.section__text {
+  margin-bottom: 1rem;
+}
+
+/* === Imágenes === */
+.image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* === Formulario === */
+.form {
+  background-color: #f4f4f4;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.form__fieldset {
+  border: none;
+}
+
+.form__label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.form__input,
+.form__select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form__button {
+  margin-top: 1rem;
+  background-color: #004080;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.form__button:hover {
+  background-color: #002f5f;
+}
+
+/* === Multimedia === */
+.video {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+/* === Footer === */
+.footer {
+  background-color: #004080;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
